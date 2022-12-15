@@ -1,0 +1,50 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<title>Collatz</title>
+		
+		<script>
+			"use strict";
+
+	function Ausgabe(){
+			
+			let N = document.getElementById("idInput").value;
+			let vOutput =  N +  "->";
+			let x=1;
+			let Quadrat;
+			let Nungerade = 3*N + 1;
+			let Ngerade = N/2
+			
+			
+			while(N != x){
+			if(N%2==0){
+				N = N / 2;
+
+			
+			}
+			else{
+				N = 3* N + 1;
+
+		
+			}			
+				vOutput = vOutput + N + "->";
+		}
+
+
+			document.getElementById("idAusgabe").innerHTML = vOutput;
+			}	
+
+		
+		</script>
+	
+	</head>
+
+	<body>
+		<h1>Collatzfolge !</h1>
+		Gib eine Zahl an <input id="idInput" type="text" value="28"><br><br>
+		<button onclick="Ausgabe();">Berechne!</button><br><br>
+		<div id="idAusgabe"></div>
+
+	</body>
+</html>
